@@ -8,6 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: upload req file
+      uses: actions/upload-artifact@v3
+      with:
+       name: requirements
+       path: requirements.txt
+       
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
